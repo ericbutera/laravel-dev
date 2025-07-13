@@ -8,4 +8,7 @@ docker-compose exec app bash           # shell into app container
 docker-compose down                    # stop and clean up
 
 docker-compose exec app php artisan make:model Todo -mcr
+# Edit the migration in database/migrations/...create_todos_table.php:
+docker-compose exec app php artisan migrate
+
 ```
