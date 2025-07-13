@@ -21,4 +21,10 @@ docker-compose exec app php artisan test --filter=TodoFeatureTest
 composer require --dev squizlabs/php_codesniffer friendsofphp/php-cs-fixer
 ```
 
+## linting
+
+```sh
+docker compose exec app ./vendor/bin/phpcs .
+docker compose exec app ./vendor/bin/phpcbf
+docker compose exec app ./vendor/bin/php-cs-fixer fix
 ```
