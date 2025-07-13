@@ -15,10 +15,8 @@ class TodoFactory extends Factory
      */
     public function definition(): array
     {
-        // TODO: fix hack
-        $faker = \Faker\Factory::create();
         return [
-            'title'     => $faker->sentence(),
+            'title'     => $this->faker->sentence(),
             'completed' => false,
         ];
     }

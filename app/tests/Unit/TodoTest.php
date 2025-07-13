@@ -1,9 +1,8 @@
 <?php
-
 namespace Tests\Unit;
 
 use App\Models\Todo;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class TodoTest extends TestCase
 {
@@ -21,7 +20,7 @@ class TodoTest extends TestCase
 
     public function test_todo_can_be_marked_completed()
     {
-        $todo = Todo::factory()->make(['completed' => false]);
+        $todo = Todo::factory()->create(['completed' => false]);
 
         $todo->completed = true;
 
