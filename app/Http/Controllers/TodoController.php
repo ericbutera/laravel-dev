@@ -10,6 +10,7 @@ class TodoController extends Controller
     public function index()
     {
         $todos = Todo::latest()->get();
+
         return view('todos.index', compact('todos'));
     }
 
@@ -22,6 +23,7 @@ class TodoController extends Controller
     {
         $request->validate(['title' => 'required|string|max:255']);
         Todo::create($request->only('title'));
+
         return redirect()->route('todos.index');
     }
 
@@ -34,12 +36,14 @@ class TodoController extends Controller
     {
         $request->validate(['title' => 'required|string|max:255']);
         $todo->update($request->only('title', 'completed'));
+
         return redirect()->route('todos.index');
     }
 
     public function destroy(Todo $todo)
     {
         $todo->delete();
+
         return redirect()->route('todos.index');
     }
 }
