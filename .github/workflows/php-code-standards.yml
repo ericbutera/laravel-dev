@@ -26,6 +26,8 @@ jobs:
         run: |
           ./vendor/bin/phpcs --report=checkstyle . | cs2pr
 
-      - name: Run PHP-CS-Fixer (dry-run)
-        run: |
-          ./vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php .
+      - name: Run pint (opinionated php cs fixer)
+        run: ./vendor/bin/pint --test
+      # - name: Run PHP-CS-Fixer (dry-run)
+      #   run: |
+      #     ./vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php .
