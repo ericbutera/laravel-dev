@@ -35,7 +35,7 @@ class TodoFeatureTest extends TestCase
         $todo = Todo::factory()->create(['title' => 'Old Title']);
 
         $response = $this->put("/todos/{$todo->id}", [
-            'title' => 'Updated Title',
+            'title'     => 'Updated Title',
             'completed' => true,
         ]);
 
