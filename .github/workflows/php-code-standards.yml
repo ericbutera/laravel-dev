@@ -20,12 +20,12 @@ jobs:
           tools: composer, cs2pr
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run PHP_CodeSniffer
         run: |
-          ./vendor/bin/phpcs --report=checkstyle | cs2pr
+          ./vendor/bin/phpcs --report=checkstyle . | cs2pr
 
       - name: Run PHP-CS-Fixer (dry-run)
         run: |
-          ./vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php
+          ./vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php-cs-fixer.dist.php .
