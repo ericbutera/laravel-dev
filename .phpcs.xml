@@ -30,7 +30,7 @@
     </rule>
 
     <rule ref="Internal.NoCodeFound">
-        <exclude-pattern>resources/views</exclude-pattern>
+        <exclude-pattern>resources/views/</exclude-pattern>
     </rule>
 
     <!-- <rule ref= "Generic.Files.LineLength">

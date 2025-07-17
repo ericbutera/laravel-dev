@@ -24,7 +24,7 @@ jobs:
 
       - name: Run PHP_CodeSniffer
         run: |
-          ./vendor/bin/phpcs --report=checkstyle . | cs2pr
+          ./vendor/bin/phpcs -q --report=checkstyle . | cs2pr
 
       - name: Run pint (opinionated php cs fixer)
         run: ./vendor/bin/pint --test
