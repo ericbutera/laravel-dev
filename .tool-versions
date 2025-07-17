@@ -1,0 +1,6 @@
+just 1.42.2
+nodejs 24.4.1
+pre-commit 4.0.1
+act 0.2.69
+# k6 0.55.0
+# tilt 0.33.21

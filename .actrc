@@ -1,0 +1,5 @@
+# --action-offline-mode
+# --rm
+# --pull=false
+--use-new-action-cache
+--artifact-server-path /tmp/artifacts # https://github.com/nektos/act/issues/329#issuecomment-1187246629
